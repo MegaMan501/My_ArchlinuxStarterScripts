@@ -6,7 +6,7 @@ INTEL='xf86-video-intel mesa lib32-mesa'
 NVIDIA='nvidia nvidia-utils lib32-nvidia-utils libva-vdpau-driver'
 XORG='xorg-server xorg-apps xorg-server-xwayland'
 
-# KDE 
+# KDE
 KDE='sddm'
 
 # GNOME
@@ -14,7 +14,8 @@ GNOME='gdm gnome gnome-extra'
 GNOME_EXTRA_PACKAGES='gnome-boxes gnome-games gnome-multi-writer simple-scan'
 
 # SYSTEM
-SYSTEM='ntfs-3g htop wget tmux samba pavucontrol bluez-utils'
+SYSTEM='htop wget tmux samba pavucontrol bluez-utils'
+FILESYSTEMS='ntfs-3g'
 PRINTER='cups cups-pdf sane xsane foomatic-db-engine foomatic-db foomatic-db-ppds foomatic-db-nonfree-ppds foomatic-db-gutenprint-ppds gutenprint ghostscript gsfonts'
 GRAPICS='gimp poppler-glib krita dia inkscape blender handbrake kdenlive openshot obs-studio simplescreenrecorder'
 MEDIA='vlc qt4 libcdio mplayer gnome-mplayer lollypop rhythmbox ardour audacity gnome-sound-recorder mpv smplayer kodi'
@@ -25,8 +26,9 @@ DEV='atom vim codeblocks eclipse-cpp geany netbeans'
 OFFICE='libreoffice-fresh hunspell hunspell-en hyphen hyphen-en libmythes mythes-en languagetool atril pdfmod xournal'
 OFFICE_EXTRA='libreoffice-extension-texmaths libreoffice-extension-writer2latex'
 RECOVERY='testdisk ddrescue'
+SSH='openssh rsync'
 
-# Themeing
+# Theming
 ICONS='papirus-icon-theme arc-icon-theme deepin-icon-theme elementary-icon-theme faenza-icon-theme faience-icon-theme gnome-icon-theme gnome-icon-theme-extras gnome-icon-theme-symbolic hicolor-icon-theme human-icon-theme lxde-icon-theme mate-icon-theme mate-icon-theme-faenza tangerine-icon-theme'
 SHELL_THEME='adapta-gtk-theme arc-gtk-theme arc-solid-gtk-theme breeze-gtk deepin-gtk-theme numix-gtk-theme'
 
@@ -163,13 +165,17 @@ install()
 # Post Installation
 postInstall()
 {
-	
+
 	USERNAME='nabler'
 
 	useradd -m -G wheel -s /bin/bash $USERNAME
+	passwd $USERNAME
+
 	nano /etc/sudoers # uncomment %wheel ALL=(ALL) ALL
 	nano /etc/pacman.conf # uncomment [multilib], and Include=/etc/pacman.d/mirrolist
 
+	pacman -Syy
+	pacman-key --refresh-keys
 	pacman -Syu $XORG $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK
 
 	systemctl enable gdm.service
