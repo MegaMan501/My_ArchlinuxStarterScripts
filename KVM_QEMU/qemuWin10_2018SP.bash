@@ -16,7 +16,7 @@ INSTALLCD=/dev/sr0
 # PCI address of the passthrough devices
 NVIDIA_GPU='04:00.0' `# Nvidia GTX 1060`
 NVIDIA_GPU_AUDIO='04:00.1' `# Nvidia GTX 1060 Audio Controller`
-USB0="06:00.0" `# VIA PCIE USB 3.0 Controller`
+USB0="02:00.0" `# VIA PCIE USB 3.0 Controller`
 USB1="07:00.0" `# Intel Motherboard USB 3.0 Controller`
 
 # AMD Motherboard PCI Stubs of USB controllers
