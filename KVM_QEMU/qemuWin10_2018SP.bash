@@ -148,7 +148,6 @@ qemuStart()
 		-device vfio-pci,host=$NVIDIA_GPU,addr=0x8.0x0,multifunction=on,x-vga=on \
 		-device vfio-pci,host=$NVIDIA_GPU_AUDIO,addr=0x8.0x1 \
 		-device vfio-pci,host=$USB0 \
-		-vga none \
 		-netdev user,id=user.0 \
 		-device qxl `# ,vgamem_mb=32` \
 		-device virtio-net-pci,netdev=user.0,mac=52:54:78:a0:66:b3 \
@@ -156,6 +155,7 @@ qemuStart()
 		-device virtio-scsi-pci,id=scsi \
 		-drive if=pflash,format=raw,readonly,file=/home/nabler/.config/qemu/OVMF_CODE.fd \
 		-drive file=$SATA0,id=disk0,format=raw,if=none -device scsi-hd,drive=disk0 `# Physical Hard Drive` \
+		#-vga none \
 		#-boot menu=on \
 		#-drive file=$INSTALLCD,id=isocd,format=raw,if=none -device scsi-cd,drive=isocd \
 		#-drive file=$DRIVERCD,id=virtiocd,format=raw,if=none -device ide-cd,bus=ide.1,drive=virtiocd \

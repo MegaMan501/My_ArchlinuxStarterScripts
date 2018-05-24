@@ -10,7 +10,7 @@ XORG='xorg-server xorg-apps xorg-server-xwayland'
 KDE='sddm'
 
 # GNOME
-GNOME='gdm gnome gnome-extra'
+GNOME='gdm gnome gnome-extra chrome-gnome-shell'
 GNOME_EXTRA_PACKAGES='gnome-boxes gnome-games gnome-multi-writer simple-scan'
 
 # SYSTEM
@@ -41,7 +41,7 @@ FONTS_CHARACTERS='noto-fonts-emoji ttf-symbola font-mathematica texlive-core tex
 BROWSERS='firefox chromium opera'
 
 # AUR
-AUR_SYSTEM='brother-hl2270dw chrome-gnome-shell-git dpkg'
+AUR_SYSTEM='brother-hl2270dw dpkg'
 AUR_FIXES='pulseaudio-bluetooth-a2dp-gdm-fix'
 AUR_MEDIA='spotify google-chrome'
 
