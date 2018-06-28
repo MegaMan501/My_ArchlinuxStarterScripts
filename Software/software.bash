@@ -16,7 +16,10 @@ GNOME_EXTRA_PACKAGES='gnome-boxes gnome-games gnome-multi-writer simple-scan'
 
 # SYSTEM
 SYSTEM='htop wget tmux samba pavucontrol bluez-utils'
-FILESYSTEMS='ntfs-3g'
+FILESYSTEMS='ntfs-3g f2fs-tools p7zip exfat-utils xfsprogs udftools	
+			reiserfsprogs nilfs-utils btrfs-progs dosfstools curlftpfs davfs2
+			encfs fuseiso s3fs-fuse sshfs ecryptfs-utils unionfs-fuse
+			squashfs-tools ceph glusterfs go-ipfs moosefs'
 PRINTER='cups cups-pdf sane xsane foomatic-db-engine foomatic-db
 		foomatic-db-ppds foomatic-db-nonfree-ppds foomatic-db-gutenprint-ppds
 		gutenprint ghostscript gsfonts'
