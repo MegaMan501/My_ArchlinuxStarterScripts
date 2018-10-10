@@ -25,6 +25,7 @@ USB3="00:16.2"
 
 # Physical Boot Drive Directory
 SATA0="/dev/sdb"
+SATA1="/dev/sdc"
 
 # Checking for root access
 if [[ $EUID -ne 0 ]]; then
@@ -154,7 +155,8 @@ qemuStart()
 		-rtc base=localtime,driftfix=slew \
 		-device virtio-scsi-pci,id=scsi \
 		-drive if=pflash,format=raw,readonly,file=/home/nabler/.config/qemu/OVMF_CODE.fd \
-		-drive file=$SATA0,id=disk0,format=raw,if=none -device scsi-hd,drive=disk0 `# Physical Hard Drive` \
+		-drive file=$SATA0,id=disk0,format=raw,if=none -device scsi-hd,drive=disk0 `# Physical Hard Drive OS` \
+		-drive file=$SATA1,id=disk1,format=raw,if=none -device scsi-hd,drive=disk1 `# Physical Hard Drive Games` \
 		#-vga none \
 		#-boot menu=on \
 		#-drive file=$INSTALLCD,id=isocd,format=raw,if=none -device scsi-cd,drive=isocd \

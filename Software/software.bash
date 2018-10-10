@@ -16,7 +16,7 @@ GNOME_EXTRA_PACKAGES='gnome-boxes gnome-games gnome-multi-writer simple-scan'
 
 # SYSTEM
 SYSTEM='htop wget tmux samba pavucontrol bluez-utils'
-FILESYSTEMS='ntfs-3g f2fs-tools p7zip exfat-utils xfsprogs udftools	
+FILESYSTEMS='ntfs-3g f2fs-tools p7zip exfat-utils xfsprogs udftools
 			reiserfsprogs nilfs-utils btrfs-progs dosfstools curlftpfs davfs2
 			encfs fuseiso s3fs-fuse sshfs ecryptfs-utils unionfs-fuse
 			squashfs-tools ceph glusterfs go-ipfs moosefs'
@@ -71,7 +71,7 @@ FONTS_CHARACTERS='noto-fonts-emoji ttf-symbola font-mathematica texlive-core
 BROWSERS='firefox chromium opera'
 
 # AUR
-AUR_SYSTEM='brother-hl2270dw dpkg'
+AUR_SYSTEM='brother-hl2270dw dpkg' 
 AUR_FIXES='pulseaudio-bluetooth-a2dp-gdm-fix'
 AUR_MEDIA='spotify google-chrome'
 
