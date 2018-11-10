@@ -34,7 +34,7 @@ NETWORK='networkmanager network-manager-applet dhclient qbittorrent youtube-dl'
 VPN='openvpn networkmanager-openvpn networkmanager-openconnect
 	networkmanager-vpnc networkmanager-strongswan'
 DEV='atom vim codeblocks eclipse-cpp geany netbeans git'
-OFFICE='libreoffice-fresh hunspell hunspell-en hyphen hyphen-en
+OFFICE='libreoffice-fresh hunspell hyphen hyphen-en
 		libmythes mythes-en languagetool atril pdfmod xournal'
 OFFICE_EXTRA='libreoffice-extension-texmaths libreoffice-extension-writer2latex'
 RECOVERY='testdisk ddrescue'
@@ -42,7 +42,7 @@ SSH='openssh rsync'
 
 # Theming
 ICONS='papirus-icon-theme arc-icon-theme deepin-icon-theme elementary-icon-theme
-	  faenza-icon-theme faience-icon-theme gnome-icon-theme
+	  faenza-icon-theme gnome-icon-theme
 	  gnome-icon-theme-extras gnome-icon-theme-symbolic hicolor-icon-theme
 	  human-icon-theme lxde-icon-theme mate-icon-theme mate-icon-theme-faenza
 	  tangerine-icon-theme'
@@ -52,7 +52,7 @@ SHELL_THEME='adapta-gtk-theme arc-gtk-theme arc-solid-gtk-theme breeze-gtk
 # Fonts
 FONTS='ttf-anonymous-pro ttf-bitstream-vera ttf-croscore ttf-droid
 	  ttf-fira-mono ttf-freefont ttf-hack ttf-inconsolata ttf-liberation
-	  ttf-roboto adobe-source-code-pro-fonts dina-font artwiz-fonts profont
+	  ttf-roboto adobe-source-code-pro-fonts dina-font artwiz-fonts
 	  tamsyn-font terminus-font bdf-unifont ttf-ubuntu-font-family ttf-gentium
 	  ttf-linux-libertine font-bh-ttf ttf-cheapskate ttf-junicode
 	  ttf-mph-2b-damase xorg-fonts-type1 noto-fonts'
@@ -79,11 +79,11 @@ AUR_MEDIA='spotify google-chrome'
 # Post Installation
 all()
 {
-	pacman -Syu $XORG $FILESYSTEMS $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $PRINTER $GRAPICS $MEDIA $CODECS $VPN $BROWSERS $SYSTEM $DEV $FONTS $OFFICE $SSH $ICONS $SHELL_THEME
+	pacman -Syu $XORG $FILESYSTEMS $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $PRINTER $GRAPICS $MEDIA $CODECS $VPN $BROWSERS $SYSTEM $DEV $FONTS $OFFICE $SSH $ICONS $SHELL_THEME &
 
 	systemctl enable gdm.service
 	systemctl enable NetworkManager
-	systemctl reboot
+	#systemctl reboot
 }
 
 if ! [ $(id -u) = 0 ]; then
