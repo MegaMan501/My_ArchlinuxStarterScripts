@@ -33,7 +33,7 @@ CODECS='celt faac faad2 flac libfdk-aac jasper lame a52dec libdca libdv
 NETWORK='networkmanager network-manager-applet dhclient qbittorrent youtube-dl'
 VPN='openvpn networkmanager-openvpn networkmanager-openconnect
 	networkmanager-vpnc networkmanager-strongswan'
-DEV='atom vim codeblocks eclipse-cpp geany netbeans'
+DEV='atom vim codeblocks eclipse-cpp geany netbeans git'
 OFFICE='libreoffice-fresh hunspell hunspell-en hyphen hyphen-en
 		libmythes mythes-en languagetool atril pdfmod xournal'
 OFFICE_EXTRA='libreoffice-extension-texmaths libreoffice-extension-writer2latex'
