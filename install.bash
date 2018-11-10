@@ -79,10 +79,10 @@ AUR_MEDIA='spotify google-chrome'
 # Post Installation
 all()
 {
-	pacman -Syu $XORG $FILESYSTEMS $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $PRINTER $GRAPICS $MEDIA $CODECS $VPN $BROWSERS $SYSTEM $DEV $FONTS $OFFICE $SSH $ICONS $SHELL_THEME &
+	pacman -Syu $XORG $FILESYSTEMS $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $PRINTER $GRAPICS $MEDIA $CODECS $VPN $BROWSERS $SYSTEM $DEV $FONTS $OFFICE $SSH $ICONS $SHELL_THEME
 
-	systemctl enable gdm.service
-	systemctl enable NetworkManager
+	#systemctl enable gdm.service
+	#systemctl enable NetworkManager
 	#systemctl reboot
 }
 
