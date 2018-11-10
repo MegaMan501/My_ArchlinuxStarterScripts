@@ -71,17 +71,24 @@ FONTS_CHARACTERS='noto-fonts-emoji ttf-symbola font-mathematica texlive-core
 BROWSERS='firefox chromium opera'
 
 # AUR
-AUR_SYSTEM='brother-hl2270dw dpkg' 
+AUR_SYSTEM='brother-hl2270dw dpkg'
 AUR_FIXES='pulseaudio-bluetooth-a2dp-gdm-fix'
 AUR_MEDIA='spotify google-chrome'
 
 
 # Post Installation
-postInstall()
+all()
 {
-	pacman -Syu $XORG $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $BROWSERS
+	pacman -Syu $XORG $FILESYSTEMS $AMD $GNOME $GNOME_EXTRA_PACKAGES $NETWORK $PRINTER $GRAPICS $MEDIA $CODECS $VPN $BROWSERS $SYSTEM $DEV $FONTS $OFFICE $SSH $ICONS $SHELL_THEME
 
 	systemctl enable gdm.service
 	systemctl enable NetworkManager
 	systemctl reboot
 }
+
+if ! [ $(id -u) = 0 ]; then
+   echo "RUN AS ROOT"
+   exit 1
+fi
+
+all
