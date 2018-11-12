@@ -25,7 +25,7 @@ USB3="00:16.2"
 
 # Physical Boot Drive Directory
 SATA0="/dev/sdb"
-SATA1="/dev/sdc"
+SATA1="/dev/sdd"
 
 # Checking for root access
 if [[ $EUID -ne 0 ]]; then
