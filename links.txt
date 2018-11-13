@@ -1,7 +1,0 @@
-https://www.khronos.org/opengl/wiki/Tutorials | Tutorials - OpenGL Wiki
-https://open.gl/ | OpenGL - Introduction
-https://learnopengl.com/Introduction | LearnOpenGL - Introduction
-http://www.opengl-tutorial.org/beginners-tutorials/tutorial-1-opening-a-window/ | Tutorial 1 : Opening a window
-
-https://vulkan-tutorial.com/Overview | Overview - Vulkan Tutorial
-https://www.khronos.org/blog/beginners-guide-to-vulkan | Beginners Guide to Vulkan - The Khronos Group Inc
