@@ -83,6 +83,7 @@ all()
 
 	#systemctl enable gdm.service
 	#systemctl enable NetworkManager
+	#systemctl enable org.cups.cupsd.service
 	#systemctl reboot
 }
 
