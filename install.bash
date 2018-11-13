@@ -71,12 +71,6 @@ postInstall()
 {
 	USERNAME='nabler'
 
-<<<<<<< HEAD
-	#systemctl enable gdm.service
-	#systemctl enable NetworkManager
-	#systemctl enable org.cups.cupsd.service
-	#systemctl reboot
-=======
 	useradd -m -G wheel -s /bin/bash $USERNAME
 	passwd $USERNAME
 
@@ -85,7 +79,6 @@ postInstall()
 
 	pacman -Syy
 	pacman-key --refresh-keys
->>>>>>> c44a260ec20e4f7112a52b8760cf23e8d7896823
 }
 
 # Bluetooth Fix
