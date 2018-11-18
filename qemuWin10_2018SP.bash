@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Monitor Variables
-MONITOR_CENTER='HDMI-0'
+MONITOR_CENTER='DisplayPort-0'
 MONITOR_RIGHT='DVI-0'
-MONITOR_LEFT='DisplayPort-0'
+MONITOR_LEFT='HDMI-0'
 
 # Installation CD location For Windows and VIRTIO Drivers
 INSTALLCD='/home/nabler/Documents/3_KVM/ISO/Win10_1607_English_x64.iso'
