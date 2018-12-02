@@ -2,8 +2,8 @@
 
 # Monitor Variables
 MONITOR_CENTER='DisplayPort-0'
-MONITOR_RIGHT='DVI-0'
-MONITOR_LEFT='HDMI-0'
+MONITOR_RIGHT='DisplayPort-1'
+MONITOR_LEFT='HDMI-A-0'
 
 # Installation CD location For Windows and VIRTIO Drivers
 INSTALLCD='/home/nabler/Documents/3_KVM/ISO/Win10_1607_English_x64.iso'
